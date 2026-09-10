@@ -1,8 +1,9 @@
 import logo from "../assets/logo-text.png";
+import MobileHeader from "./MobileHeader";
 const Header = () => {
   return (
     <div>
-      <div className="container flex justify-between items-center mx-auto">
+      <div className="container hidden lg:flex justify-between items-center mx-auto">
         <div className="logo">
           <a href="/">
             <img src={logo} alt="logo" />
@@ -67,6 +68,7 @@ const Header = () => {
           </a>
         </div>
       </div>
+      <MobileHeader />
     </div>
   );
 };
