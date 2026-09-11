@@ -2,7 +2,7 @@ import logo from "../assets/logo-text.png";
 import MobileHeader from "./MobileHeader";
 const Header = () => {
   return (
-    <div>
+    <div className="sticky top-0 bg-white">
       <div className="container hidden lg:flex justify-between items-center mx-auto">
         <div className="logo">
           <a href="/">

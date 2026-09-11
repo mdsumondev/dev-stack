@@ -1,19 +1,17 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import logo from "../assets/logo-text.png";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-white text-gray-600 font-sans border-t border-gray-100">
-      <div className="max-w-7xl mx-auto px-6 pt-12 pb-8">
+    <footer className=" bg-white text-gray-600 font-sans border-t border-gray-100">
+      <div className="container mx-auto px-6 pt-12 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12">
           <div className="md:col-span-5 space-y-4 pr-0 md:pr-12">
             <div className="flex items-center space-x-2">
-              <div className="bg-pink-600 text-white font-bold text-xs rounded-md w-7 h-7 flex items-center justify-center">
-                DS
+              <div className="">
+                <img src={logo} alt="logo" />
               </div>
-              <span className="text-xl font-bold tracking-tight text-gray-900">
-                Dev <span className="text-pink-600">Stack</span>
-              </span>
             </div>
 
             <p className="text-sm text-gray-500 leading-relaxed max-w-sm">
@@ -40,26 +38,17 @@ const Footer = () => {
               </h3>
               <ul className="space-y-3 text-sm text-gray-500">
                 <li>
-                  <a
-                    href="#home"
-                    className="hover:text-gray-900 transition-colors"
-                  >
+                  <a href="#" className="hover:text-gray-900 transition-colors">
                     Home
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#technologies"
-                    className="hover:text-gray-900 transition-colors"
-                  >
+                  <a href="#" className="hover:text-gray-900 transition-colors">
                     Technologies
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#projects"
-                    className="hover:text-gray-900 transition-colors"
-                  >
+                  <a href="#" className="hover:text-gray-900 transition-colors">
                     Projects
                   </a>
                 </li>
@@ -71,51 +60,35 @@ const Footer = () => {
               </h3>
               <ul className="space-y-3 text-sm text-gray-500">
                 <li>
-                  <a
-                    href="#about"
-                    className="hover:text-gray-900 transition-colors"
-                  >
+                  <a href="#" className="hover:text-gray-900 transition-colors">
                     About
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#contact"
-                    className="hover:text-gray-900 transition-colors"
-                  >
+                  <a href="#" className="hover:text-gray-900 transition-colors">
                     Contact
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#careers"
-                    className="hover:text-gray-900 transition-colors"
-                  >
+                  <a href="#" className="hover:text-gray-900 transition-colors">
                     Careers
                   </a>
                 </li>
               </ul>
             </div>
 
-            {/* Legal Column */}
             <div>
               <h3 className="text-xs font-bold text-gray-900 tracking-wider uppercase mb-4">
                 Legal
               </h3>
               <ul className="space-y-3 text-sm text-gray-500">
                 <li>
-                  <a
-                    href="#privacy"
-                    className="hover:text-gray-900 transition-colors"
-                  >
+                  <a href="#" className="hover:text-gray-900 transition-colors">
                     Privacy Policy
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#terms"
-                    className="hover:text-gray-900 transition-colors"
-                  >
+                  <a href="#" className="hover:text-gray-900 transition-colors">
                     Terms of Service
                   </a>
                 </li>

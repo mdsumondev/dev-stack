@@ -47,11 +47,8 @@ const Stack = ({ stack, handleYourStact, isAdded }: StackProps) => {
       <button
         type="button"
         disabled={isAdded}
-        onClick={(e) => {
-          e.preventDefault();
-          handleYourStact(stack);
-        }}
-        className={`w-full rounded-xl py-3 text-sm font-semibold text-white transition-colors active:scale-[0.98] ${
+        onClick={() => handleYourStact(stack)}
+        className={`w-full rounded-xl py-3 text-sm font-semibold text-white transition-colors active:scale-[0.98] cursor-pointer ${
           isAdded
             ? "bg-green-600 cursor-not-allowed"
             : "bg-[#090D16] hover:bg-slate-800"

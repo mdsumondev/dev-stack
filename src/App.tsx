@@ -1,21 +1,31 @@
 import { Suspense, useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
-import Stacks from "./assets/Stacks";
 import Footer from "./Component/Footer";
 import Header from "./Component/Header";
 import Hero from "./Component/Hero";
+import Stacks from "./Component/Stacks";
 import YouStack from "./Component/YouStack";
 import type { stackType } from "./Type/type";
 
 function App() {
   const [addedStack, setAddedStack] = useState<stackType[]>([]);
 
-  const handleRemove = (id: number) => {
+  const handleRemove = (id: number | string) => {
+    const itemToRemove = addedStack.find((item) => item.id === id);
     setAddedStack((prev) => prev.filter((item) => item.id !== id));
+
+    if (itemToRemove) {
+      toast.error(`${itemToRemove.name} removed from your stack!`);
+    }
   };
 
   const handleClearAll = () => {
-    setAddedStack([]);
+    if (addedStack.length > 0) {
+      setAddedStack([]);
+      toast.warn("All technologies removed from your stack!");
+    }
   };
 
   const stacksData = async (): Promise<stackType[]> => {
@@ -28,12 +38,19 @@ function App() {
     const alreadyExit = addedStack.some((exit) => exit.id === stack.id);
 
     if (!alreadyExit) {
-      setAddedStack([...addedStack, stack]);
+      setAddedStack((prev) => [...prev, stack]);
+      toast.success(`${stack.name} added to your stack!`);
     }
   };
 
   return (
     <>
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar={false}
+      />
+
       <Header />
       <Hero />
 

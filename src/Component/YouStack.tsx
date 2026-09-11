@@ -2,7 +2,7 @@ import type { stackType } from "../Type/type";
 
 interface YouStackProps {
   addedStack: stackType[];
-  handleRemove: (id: string | number) => void;
+  handleRemove: (id: number | string) => void;
   handleClearAll: () => void;
 }
 
@@ -47,11 +47,8 @@ const YouStack = ({
 
             <button
               type="button"
-              onClick={(e) => {
-                e.preventDefault();
-                handleRemove(yourStack.id);
-              }}
-              className="text-slate-400 hover:text-slate-600 transition-colors p-1"
+              onClick={() => handleRemove(yourStack.id)}
+              className="text-slate-400 hover:text-slate-600 transition-colors p-1 cursor-pointer"
               aria-label={`Remove ${yourStack.name}`}
             >
               <svg
@@ -75,11 +72,8 @@ const YouStack = ({
 
       <button
         type="button"
-        onClick={(e) => {
-          e.preventDefault();
-          handleClearAll();
-        }}
-        className="w-full py-2.5 px-4 rounded-xl border border-red-200 text-red-500 font-bold text-sm hover:bg-red-50 transition-colors text-center"
+        onClick={handleClearAll}
+        className="w-full py-2.5 px-4 rounded-xl border border-red-200 text-red-500 font-bold text-sm hover:bg-red-50 transition-colors text-center cursor-pointer"
       >
         Remove All
       </button>
