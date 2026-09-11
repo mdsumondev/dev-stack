@@ -1,3 +1,4 @@
+import { FaXmark } from "react-icons/fa6";
 import type { stackType } from "../Type/type";
 
 interface YouStackProps {
@@ -31,7 +32,7 @@ const YouStack = ({
           >
             <div className="flex items-center gap-3">
               <img
-                src={yourStack.image || yourStack.icon}
+                src={yourStack.icon}
                 alt={yourStack.name}
                 className="w-7 h-7 object-contain"
               />
@@ -51,20 +52,7 @@ const YouStack = ({
               className="text-slate-400 hover:text-slate-600 transition-colors p-1 cursor-pointer"
               aria-label={`Remove ${yourStack.name}`}
             >
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
-                ></path>
-              </svg>
+              <FaXmark />
             </button>
           </div>
         ))}
