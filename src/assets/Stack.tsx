@@ -1,20 +1,29 @@
+import { useState } from "react";
 import { FaStar } from "react-icons/fa";
-import { SiMysql } from "react-icons/si";
 import type { stackType } from "../Type/type";
 
 interface StackProps {
   stack: stackType;
+  handleYourStact: (stack: stackType) => void;
 }
 
-const Stack = ({ stack }: StackProps) => {
-  const { name, badge, description, category, level, rating } = stack;
+const Stack = ({ stack, handleYourStact }: StackProps) => {
+  const { name, badge, description, category, level, rating, icon } = stack;
+
+  const [added, setAdded] = useState(false);
+
+  const handleAdded = () => {
+    if (added) return;
+
+    setAdded(true);
+    handleYourStact(stack);
+  };
 
   return (
     <div className="w-80 rounded-2xl border border-gray-100 bg-white p-6 shadow-sm flex flex-col justify-between space-y-4">
-      {/* Icon & Badge */}
       <div className="flex items-center justify-between">
         <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-sky-500">
-          <SiMysql className="h-8 w-8" />
+          <img src={icon} alt={name} className="h-8 w-8 object-contain" />
         </div>
 
         <span className="rounded-full bg-sky-50 px-3 py-1 text-xs font-medium text-sky-500 border border-sky-100">
@@ -22,7 +31,6 @@ const Stack = ({ stack }: StackProps) => {
         </span>
       </div>
 
-      {/* Title & Description */}
       <div className="space-y-2">
         <h3 className="text-xl font-bold text-slate-900">{name}</h3>
 
@@ -31,7 +39,6 @@ const Stack = ({ stack }: StackProps) => {
         </p>
       </div>
 
-      {/* Category, Level & Rating */}
       <div className="flex items-center justify-between text-xs font-medium text-slate-600 pt-2 border-t border-gray-50">
         <span className="rounded-md bg-slate-100 px-2.5 py-1 text-slate-600">
           {category}
@@ -46,9 +53,16 @@ const Stack = ({ stack }: StackProps) => {
         </div>
       </div>
 
-      {/* Action Button */}
-      <button className="w-full rounded-xl bg-[#090D16] py-3 text-sm font-semibold text-white transition-colors hover:bg-slate-800 active:scale-[0.98]">
-        Add to Stack
+      <button
+        disabled={added}
+        onClick={handleAdded}
+        className={`w-full rounded-xl py-3 text-sm font-semibold text-white transition-colors active:scale-[0.98] ${
+          added
+            ? "bg-green-600 cursor-not-allowed"
+            : "bg-[#090D16] hover:bg-slate-800"
+        }`}
+      >
+        {added ? "Added the Stack" : "Add to Stack"}
       </button>
     </div>
   );

@@ -7,7 +7,7 @@
     "level": "Beginner-Friendly",
     "rating": 4.9,
     "badge": "Popular",
-    "icon": "react"
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMHue5jD8tRsRhN6HmfFBAF5fVlKX3fSSPgtaupb_ilA&s=10"
   },
   {
     "id": 2,
@@ -17,7 +17,7 @@
     "level": "Beginner-Friendly",
     "rating": 4.8,
     "badge": "Versatile",
-    "icon": "vue"
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbtqURksta_5_21QUHyTj21U_HddnSMA7xdEWCu77LuA&s=10"
   },
   {
     "id": 3,
@@ -27,7 +27,7 @@
     "level": "Intermediate",
     "rating": 4.8,
     "badge": "Fast",
-    "icon": "svelte"
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMkQQeftmOK8W6pk95Lr-K08re6W1cgJOyQAC5AiJlEg&s=10"
   },
   {
     "id": 4,
@@ -37,7 +37,7 @@
     "level": "Intermediate",
     "rating": 4.9,
     "badge": "SSR / Edge",
-    "icon": "nextjs"
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS6U-dzzTg9FZLP_6WVHLv3ul2mNpmBaRPmtUaLbg1jA&s=10"
   },
   {
     "id": 5,
@@ -47,7 +47,7 @@
     "level": "Intermediate",
     "rating": 4.8,
     "badge": "Standard",
-    "icon": "nodejs"
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKSd1MrHMU4qngvsrTjAleFvbAh6ADam4HQcmDji9yHQ&s=10"
   },
   {
     "id": 6,
@@ -57,7 +57,7 @@
     "level": "Intermediate",
     "rating": 4.9,
     "badge": "Top SQL",
-    "icon": "postgresql"
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY1cx_epMmFF0rwT7vU1NifbsFTXjNz00JDSWmW9wEgA&s=10"
   },
   {
     "id": 7,
@@ -67,7 +67,7 @@
     "level": "Beginner-Friendly",
     "rating": 4.9,
     "badge": "Typed JS",
-    "icon": "typescript"
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcunkuFe9FWPptP5GNkm0NOHoPYz5Jb_y4ayzTsd-tVg&s=10"
   },
   {
     "id": 8,
@@ -77,7 +77,7 @@
     "level": "Beginner-Friendly",
     "rating": 4.9,
     "badge": "Essential",
-    "icon": "javascript"
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ-p4sxEnWDO760DGGCg-blAarKF-l3sswaEyo0tsvNQ&s=10"
   },
   {
     "id": 9,
@@ -87,7 +87,7 @@
     "level": "Beginner-Friendly",
     "rating": 4.8,
     "badge": "Utility-First",
-    "icon": "tailwindcss"
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyf5uKEYANKDnutejYLNxRWpcFFRWB5_Ohx_p3TkbGfw&s=10"
   },
   {
     "id": 10,
@@ -97,7 +97,7 @@
     "level": "Intermediate",
     "rating": 4.7,
     "badge": "Lightweight",
-    "icon": "express"
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRINRdzpxFXQ2cQPA06IDFjJqzHlFgUAVyu0o3jVflTRA&s=10"
   },
   {
     "id": 11,
@@ -107,7 +107,7 @@
     "level": "Intermediate",
     "rating": 4.7,
     "badge": "NoSQL",
-    "icon": "mongodb"
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXvbtg_bcR5rRjUyM0-kUI6AnKTs4Bu6hp0jQDxjmLhA&s=10"
   },
   {
     "id": 12,
@@ -117,7 +117,7 @@
     "level": "Beginner-Friendly",
     "rating": 4.9,
     "badge": "Essential",
-    "icon": "git"
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkJ-qG019CQ1DS7IP4r4ZzOTOaLyzKX5s5JqExIwkJCg&s=10"
   },
   {
     "id": 13,
@@ -127,7 +127,7 @@
     "level": "Intermediate",
     "rating": 4.8,
     "badge": "Containers",
-    "icon": "docker"
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQva3OL3gFbNGfq44TGI7iOGW9ACEzauzk0ojcZdGvsbA&s=10"
   },
   {
     "id": 14,
@@ -137,7 +137,7 @@
     "level": "Intermediate",
     "rating": 4.8,
     "badge": "PHP",
-    "icon": "laravel"
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEqTJBkcCvvx6-_qYwcUKHWLJ0MTI1V2ku4pRl10q-JQ&s=10"
   },
   {
     "id": 15,
@@ -147,6 +147,6 @@
     "level": "Beginner-Friendly",
     "rating": 4.8,
     "badge": "Popular SQL",
-    "icon": "mysql"
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6Gmg6JydW3nQI3S6DmiByn2JMXvDsu-2WuGDKSQpm0A&s=10"
   }
 ]
