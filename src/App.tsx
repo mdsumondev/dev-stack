@@ -1,6 +1,7 @@
 import { Suspense, useState } from "react";
 import "./App.css";
 import Stacks from "./assets/Stacks";
+import Footer from "./Component/Footer";
 import Header from "./Component/Header";
 import Hero from "./Component/Hero";
 import YouStack from "./Component/YouStack";
@@ -9,10 +10,17 @@ import type { stackType } from "./Type/type";
 function App() {
   const [addedStack, setAddedStack] = useState<stackType[]>([]);
 
+  const handleRemove = (id: number) => {
+    setAddedStack((prev) => prev.filter((item) => item.id !== id));
+  };
+
+  const handleClearAll = () => {
+    setAddedStack([]);
+  };
+
   const stacksData = async (): Promise<stackType[]> => {
     const res = await fetch("/Stack.json");
     const data = await res.json();
-
     return data;
   };
 
@@ -41,17 +49,22 @@ function App() {
           <p>Pick one technology per category to build your ideal stack.</p>
         </div>
 
-        <div className="flex">
+        <div className="flex pb-[100px]">
           <Suspense fallback={<h3>Loading....</h3>}>
             <Stacks
               stacksDatas={stacksData()}
               handleYourStact={handleYourStact}
+              addedStack={addedStack}
             />
           </Suspense>
 
           <div className="w-[30%] p-5">
             {addedStack.length > 0 ? (
-              <YouStack addedStack={addedStack} />
+              <YouStack
+                addedStack={addedStack}
+                handleRemove={handleRemove}
+                handleClearAll={handleClearAll}
+              />
             ) : (
               <div className="w-full rounded-2xl border border-slate-100 bg-white p-6 shadow-sm">
                 <h2 className="text-xl font-bold text-slate-900">Your Stack</h2>
@@ -70,6 +83,7 @@ function App() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

@@ -2,11 +2,15 @@ import type { stackType } from "../Type/type";
 
 interface YouStackProps {
   addedStack: stackType[];
-  onRemove?: (id: string | number) => void;
-  onClearAll?: () => void;
+  handleRemove: (id: string | number) => void;
+  handleClearAll: () => void;
 }
 
-const YouStack = ({ addedStack, onRemove, onClearAll }: YouStackProps) => {
+const YouStack = ({
+  addedStack,
+  handleRemove,
+  handleClearAll,
+}: YouStackProps) => {
   return (
     <div className="max-w-xs mx-auto my-8 p-6 bg-white rounded-3xl border border-slate-100 shadow-sm font-sans">
       <div className="mb-5">
@@ -20,7 +24,6 @@ const YouStack = ({ addedStack, onRemove, onClearAll }: YouStackProps) => {
       </div>
 
       <div className="space-y-3 mb-8">
-        {/* Implicit return used here with () */}
         {addedStack.map((yourStack) => (
           <div
             key={yourStack.id}
@@ -43,7 +46,11 @@ const YouStack = ({ addedStack, onRemove, onClearAll }: YouStackProps) => {
             </div>
 
             <button
-              onClick={() => onRemove?.(yourStack.id)}
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                handleRemove(yourStack.id);
+              }}
               className="text-slate-400 hover:text-slate-600 transition-colors p-1"
               aria-label={`Remove ${yourStack.name}`}
             >
@@ -67,7 +74,11 @@ const YouStack = ({ addedStack, onRemove, onClearAll }: YouStackProps) => {
       </div>
 
       <button
-        onClick={onClearAll}
+        type="button"
+        onClick={(e) => {
+          e.preventDefault();
+          handleClearAll();
+        }}
         className="w-full py-2.5 px-4 rounded-xl border border-red-200 text-red-500 font-bold text-sm hover:bg-red-50 transition-colors text-center"
       >
         Remove All

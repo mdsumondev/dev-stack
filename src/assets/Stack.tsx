@@ -1,23 +1,14 @@
-import { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import type { stackType } from "../Type/type";
 
 interface StackProps {
   stack: stackType;
   handleYourStact: (stack: stackType) => void;
+  isAdded: boolean;
 }
 
-const Stack = ({ stack, handleYourStact }: StackProps) => {
+const Stack = ({ stack, handleYourStact, isAdded }: StackProps) => {
   const { name, badge, description, category, level, rating, icon } = stack;
-
-  const [added, setAdded] = useState(false);
-
-  const handleAdded = () => {
-    if (added) return;
-
-    setAdded(true);
-    handleYourStact(stack);
-  };
 
   return (
     <div className="w-80 rounded-2xl border border-gray-100 bg-white p-6 shadow-sm flex flex-col justify-between space-y-4">
@@ -54,15 +45,19 @@ const Stack = ({ stack, handleYourStact }: StackProps) => {
       </div>
 
       <button
-        disabled={added}
-        onClick={handleAdded}
+        type="button"
+        disabled={isAdded}
+        onClick={(e) => {
+          e.preventDefault();
+          handleYourStact(stack);
+        }}
         className={`w-full rounded-xl py-3 text-sm font-semibold text-white transition-colors active:scale-[0.98] ${
-          added
+          isAdded
             ? "bg-green-600 cursor-not-allowed"
             : "bg-[#090D16] hover:bg-slate-800"
         }`}
       >
-        {added ? "Added the Stack" : "Add to Stack"}
+        {isAdded ? "Added to Stack" : "Add to Stack"}
       </button>
     </div>
   );
